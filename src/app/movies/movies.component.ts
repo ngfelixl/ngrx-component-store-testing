@@ -7,12 +7,12 @@ import { MoviesStore } from './movies.component.store';
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.css'],
-  providers: [],
+  providers: [MoviesStore],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MoviesComponent implements OnInit {
   addMovieForm: FormGroup;
-  readonly movies$ = this.moviesStore.movies$;
+  movies$ = this.moviesStore.movies$;
 
   constructor(private readonly moviesStore: MoviesStore) {
     this.addMovieForm = new FormGroup({
@@ -32,10 +32,5 @@ export class MoviesComponent implements OnInit {
 
   deleteMovie(id: number): void {
     this.moviesStore.deleteMovie(id);
-  }
-
-  resetMovies(): void {
-    //    resets the State to empty array 👇
-    this.moviesStore.setState({movies: []});
   }
 }

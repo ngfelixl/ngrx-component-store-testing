@@ -3,9 +3,9 @@
   <button [disabled]="addMovieForm.invalid">Add Movie</button>
 </form>
 
-<ul>
+<ul class="movies">
   <li class="movie" *ngFor="let movie of (movies$ | async)">
     <span>{{ movie.name }}</span>
-    <button (click)="deleteMovie(movie.id)">Delete</button>
+    <button (click)="deleteMovie(movie.id)" class="delete">Delete</button>
   </li>
 </ul>
