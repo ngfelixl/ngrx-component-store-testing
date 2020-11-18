@@ -92,6 +92,13 @@
             ],
             "scripts": [],
             "codeCoverage": true
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "progress": false,
+              "browsers": "ChromeHeadlessCI"
+            }
           }
         },
         "lint": {
