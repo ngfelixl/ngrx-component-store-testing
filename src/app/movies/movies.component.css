@@ -1,0 +1,38 @@
+form {
+  display: flex;
+  max-width: 500px;
+  margin: 20px auto;
+  justify-content: stretch;
+}
+
+form input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  max-width: 500px;
+  margin: 20px auto;
+  justify-content: stretch;
+  list-style: none;
+  padding: 0;
+}
+
+.movie {
+  display: flex;
+  justify-content: stretch;
+  margin: 8px 0;
+}
+
+.movie span {
+  flex: 1 1 0;
+}
+
+.movie button {
+  flex: 0 0 auto;
+}
